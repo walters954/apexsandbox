@@ -1,6 +1,7 @@
 public with sharing class ApexSandboxApex101 {
 
     //#18 - Teenager
+    //https://www.apexsandbox.io/problem/18
     //https://youtu.be/poOkMQ0uk90
     public Boolean isTeenager(Integer age) {
         //code here
@@ -18,6 +19,7 @@ public with sharing class ApexSandboxApex101 {
     }
 
     //#4 - Number Difference
+    //https://www.apexsandbox.io/problem/4
     //https://youtu.be/er9wDs3Fq54
     public Integer diff(Integer a, Integer b) {
         //code here
@@ -32,6 +34,7 @@ public with sharing class ApexSandboxApex101 {
     }
 
     //#14 - Sum Equals
+    //https://www.apexsandbox.io/problem/14
     //https://youtu.be/kiquDckDECk
     public Boolean sumEquals(Integer a, Integer b, Integer c) {
         //code here
@@ -45,6 +48,30 @@ public with sharing class ApexSandboxApex101 {
         */
 
         return ((a + b) == c);
+    }
+
+    //#20 - Ascending Order
+    //https://www.apexsandbox.io/problem/20
+    //https://youtu.be/9AmN4BSTB2k
+
+    public Boolean ascendingOrder(Integer a, Integer b, Integer c) {
+        //code here
+    
+        /*if (a <= b && b <= c){
+            return true;
+        } else { 
+            return false;
+        }*/
+
+        return a <= b && b <= a;
+        
+        /*List<Integer> originalList = new List<Integer>();
+        originalList.add(a);
+        originalList.add(b);
+        originalList.add(c);
+        List<Integer> sortList = new List<Integer>{a,b,c};
+        sortList.sort();
+        return sortList.equals(originalList);*/
     }
 }
 
