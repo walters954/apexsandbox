@@ -78,10 +78,24 @@ public with sharing class ApexSandboxApex101 {
     //https://www.apexsandbox.io/problem/130
     //https://youtu.be/OJae7Rm6dWg
     public List<apxio__Student__c> selectUnreachableStudents() {
-    // code here
-    List<apxio__Student__c> students = [SELECT Id, Name FROM apxio__Student__c WHERE apxio__Active__c = TRUE AND apxio__Email__c = NULL AND apxio__Phone__c = NULL ORDER BY Name];
-    return students;
-}
+        // code here
+        List<apxio__Student__c> students = [SELECT Id, Name FROM apxio__Student__c WHERE apxio__Active__c = TRUE AND apxio__Email__c = NULL AND apxio__Phone__c = NULL ORDER BY Name];
+        return students;
+    }
+
+    //#129 - Students Missing Info
+    //https://www.apexsandbox.io/problem/129
+    //https://youtu.be/_-4IBscpqFM
+    public List<apxio__Student__c> selectUnreachableStudents() {
+        // code here
+        List<apxio__Student__c> students = [SELECT Id, Name FROM apxio__Student__c 
+        WHERE apxio__Active__c = TRUE AND
+                (apxio__Email__c = NULL OR 
+                apxio__Phone__c = NULL)
+        ORDER BY Name];
+        return students;
+    }
+        
 }
 
 
