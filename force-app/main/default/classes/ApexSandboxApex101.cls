@@ -95,7 +95,18 @@ public with sharing class ApexSandboxApex101 {
         ORDER BY Name];
         return students;
     }
-        
+
+    //#19 - Passing Students
+    //https://www.apexsandbox.io/problem/19
+    //https://youtu.be/_-4IBscpqFM
+    public List<apxio__Student__c> selectUnreachableStudents() {
+        // code here
+        if ((passedExam && passedAssignments) || (passedAssignments && passedProject) ||(passedExam  && passedProject)){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 
