@@ -98,7 +98,7 @@ public with sharing class ApexSandboxApex101 {
 
     //#19 - Passing Students
     //https://www.apexsandbox.io/problem/19
-    //https://youtu.be/_-4IBscpqFM
+    //https://youtu.be/-OiznU_hvUs
     public List<apxio__Student__c> selectUnreachableStudents() {
         // code here
         if ((passedExam && passedAssignments) || (passedAssignments && passedProject) ||(passedExam  && passedProject)){
